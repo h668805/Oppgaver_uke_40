@@ -6,18 +6,18 @@ public class Varelager {
 	protected int antall;
 
 	public Varelager(int n) {
-		this.varer = new Vare[n];
-		this.antall = 0;
+		varer = new Vare[n];
+		antall = 0;
 	}
 
 	public Vare[] getVarer() {
 
-		return this.varer;
+		return varer;
 	}
 
 	public boolean leggTilVare(Vare v) {
-		if (antall < this.varer.length) {
-			this.varer[antall] = v;
+		if (antall < varer.length) {
+			varer[antall] = v;
 			antall++;
 			return true;
 		} else
@@ -31,8 +31,8 @@ public class Varelager {
 	}
 
 	public Vare finnVare(int varenr) {
-		for (int i = 0; i < this.varer.length; i++) {
-			if (this.varer[i].getVarenr() == varenr)
+		for (int i = 0; i < varer.length; i++) {
+			if (varer[i].getVarenr() == varenr)
 				return varer[i];
 		}
 		return null;
@@ -41,13 +41,15 @@ public class Varelager {
 	private String SEP = "=================================";
 
 	public void printVarelager() {
-		System.out.println(this.SEP);
-		for (int i = 0; i < this.varer.length; i++) {
-			System.out.print("Vare [varenr=" + i);
-			System.out.print(", navn=" + varer[i].getNavn());
-			System.out.println(", pris=" + varer[i].getPris() + "]");
+		System.out.println(SEP);
+//		for (int i = 0; i < varer.length; i++) {
+//			System.out.print("Vare [varenr=" + i);
+//			System.out.print(", navn=" + varer[i].getNavn());
+//			System.out.println(", pris=" + varer[i].getPris() + "]");
+		for (Vare vare : varer) {
+			System.out.println(vare.toString());
 		}
-		System.out.println(this.SEP);
+		System.out.println(SEP);
 	}
 
 }

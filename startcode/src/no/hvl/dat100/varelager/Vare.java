@@ -15,7 +15,7 @@ public class Vare {
 	
 	public int getVarenr() {
 		
-		return this.varenr;
+		return varenr;
 	}
 	
 	public void setVarenr(int varenr) {
@@ -25,7 +25,7 @@ public class Vare {
 	
 	public String getNavn() {
 		
-		return this.navn;
+		return navn;
 	}
 	
 	public void setNavn(String navn) {
@@ -35,7 +35,7 @@ public class Vare {
 	
 	public double getPris() {
 		
-		return this.pris;
+		return pris;
 	}
 	
 	public void setPris(double pris) {
@@ -45,7 +45,7 @@ public class Vare {
 	
 	public double beregnMoms() {
 		
-		return (double)this.pris/5.0;
+		return pris/5.0;
 	}
 	
 	public String toString() {
@@ -55,7 +55,7 @@ public class Vare {
 	
 	public boolean erBilligereEnn(Vare v) {
 		
-		return this.pris < v.pris;
+		return pris < v.pris;
 	}
 	
 }
